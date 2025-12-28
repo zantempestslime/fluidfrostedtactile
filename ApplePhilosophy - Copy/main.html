@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Premium Glass UI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styling.css">
+</head>
+<body class="mainbody">
+
+    <div class="navanchor">
+        <div class="navbar">
+            <button class="btntest main-icon">=</button>
+            <div class="nav-content">
+                <button class="btntest" onclick="scrollToPage(0)">Home</button>
+                <button class="btntest" onclick="scrollToPage(1)">Search</button>
+                <button class="btntest" onclick="scrollToPage(2)">Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="viewport">
+        <section class="page">
+            <div class="content-box">
+                <h1>Home</h1>
+                <p>Welcome to the fluid interface.</p>
+            </div>
+        </section>
+        <section class="page">
+            <div class="content-box">
+                <h1>Search</h1>
+                <p>Find what you are looking for.</p>
+            </div>
+        </section>
+        <section class="page">
+            <div class="content-box">
+                <h1>Settings</h1>
+                <p>Adjust your preferences.</p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Function to handle the fluid scroll
+        function scrollToPage(index) {
+            const viewer = document.querySelector('.viewport');
+            viewer.scrollTo({
+                left: index * window.innerWidth,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
